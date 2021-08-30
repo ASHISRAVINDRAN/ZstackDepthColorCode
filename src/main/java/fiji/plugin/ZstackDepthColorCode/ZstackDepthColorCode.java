@@ -288,9 +288,10 @@ public class ZstackDepthColorCode implements PlugIn {
 		}
 		
 		System.gc();
-		WindowManager.setCurrentWindow(winD);
-		winD.toFront();
-		
+		if (winD != null) {
+			WindowManager.setCurrentWindow(winD);
+			winD.toFront();
+		}
 
 	}
 
